@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeriVia - Livros de Design e Desenvolvimento</title>
+
+    <!-- Importação das fontes -->
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+
+    <style>
+        /* Estilos globais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1ede7;
+            color: #293d5d
+;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: ##f1ede7;
+        }
+
+        /* Logo */
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            font-size: 16px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #293d5d
+;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #0056b3;
+        }
+
+        /* Seção Principal */
+        .main-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .main-section h2 {
+            font-size: 28px;
+            color: #293d5d
+;
+        }
+
+        .main-section p {
+            font-size: 18px;
+            color: #4a4a4a;
+            margin: 20px 0;
+        }
+
+        .highlight {
+            color: #0056b3;
+        }
+
+        .study-section {
+            padding: 50px 20px;
+            background-color: #002855;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .study-text {
+            margin-bottom:20px ;
+        }
+
+        .study-carousel {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .study-carousel img {
+            width: 150px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .tags-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .tag-cloud {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag-cloud span {
+            background-color: #4a4a4a;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+
+        .purple {
+            background-color: #673ab7;
+        }
+
+        .blue {
+            background-color: #0056b3;
+        }
+
+         /* Responsividade */
+         @media (max-width: 20px) {
+            .study-section {
+                flex-direction: column; /* Coloca o texto e as imagens em coluna*/
+                text-align: center;
+            
+
+            .study-section {
+                justify-content: center;
+                max-width: 100%;
+            }
+
+            .study-text {
+                max-width: 100%;
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+                padding: 20px;
+            }
+
+            .card {
+                background-color: #3d348b;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                width: 250px; 
+                text-align: center;
+                padding: 20px;
+                margin: 10px;
+            }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            color: #ddd;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .card p {
+            color: #ccc;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            text-decoration: none;
+            background-color: #8e44ad;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .card a:hover {
+            background-color: #732d91;
+        }
+
+         /* Rodapé */
+         .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            color: #888;
+        }
+        }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho-->
+    <header>
+        <!--Logo-->
+        <a href="index.html"><img src="img/logo-lerevia.jpeg" alt="Logo Lerivia" class="logo"></a>
+
+        <!-- Navegação-->
+        <nav>
+            <ul>
+                <li><a href="técnicas.html">Técnicas de Estudo</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="Estante.html">Sua Estante</a></li>
+                <li><a href="login inter/login.html.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Principal -->
+    <section class="main-section">
+        <h2>
+            Desenvolva sua leitura e melhore suas técnicas de estudo
+        </h2>
+        <p>
+            Temos tudo para inspirar e guiar seu aprendizado na área de TI ou Design.
+        </p>
+    </section>
+
+    <!-- Seção Técnicas de estudo-->
+    <section class="study-section">
+        <div class="study-text">
+            <h2>Conteúdos Educacionais</h2>
+        </div>
+        <div class="study-carousel">
+
+          <div class="card">
+            <img src="img/pomodoro.jpg" alt="pomodoro" width="150px">  
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas porta nibh.</p>
+            <a href="pomodoro.html">Acessar</a>
+          </div>
+
+          <div class="card">
+            <img src="img/pomodoro.jpg" alt="pomodoro" width="150px">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas porta nibh.</p>
+            <a href="pomodoro.html">Acessar</a>
+          </div>
+
+          <div class="card">
+            <img src="img/pomodoro.jpg" alt="pomodoro" width="150px">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas porta nibh.</p>
+            <a href="pomodoro.html">Acessar</a>
+        </div>
+          
+    </section>
+
+    <!-- Seção da Estante -->
+    <section id="Dicas" class="main-section">
+        <h2>Dicas Gerais</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas porta nibh. Cras vitae orci finibus, lobortis orci nec, sodales est. Aliquam dictum tempus leo et sodales. Pellentesque efficitur felis dui, nec lacinia felis maximus non. Etiam pulvinar scelerisque quam eu euismod. </p>
+        <a href="dicas.html">Ver Dicas</a>
+    </section>
+
+     <!-- Rodapé -->
+     <div class="footer">
+        <p>&copy; 2024 Lerivia. Todos os direitos reservados.</p>
+    </div>
+    
+</body>
+
+</html>

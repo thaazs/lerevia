@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lerivia - Estante Virtual</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color:#f1ede7;
+    }
+
+    p, h1, h2, h3 {
+      line-height: 1.5em;
+    }
+
+    header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f1ede7;
+        }
+
+        /* Logo */
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            font-size: 16px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #293d5d
+;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #0056b3;
+        }
+
+    .book-display {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 40px;
+    }
+
+    .book-cover img {
+      width: 300px;
+      border-radius: 5px;
+    }
+
+    .book-cover .bookmark {
+      position: absolute;
+      background-color: #1d3f72;
+      width: 20px;
+      height: 60px;
+      top: 10px;
+      right: 10px;
+      border-radius: 3px;
+    }
+
+    .book-details {
+      max-width: 500px;
+      padding-left: 20px;
+    }
+
+    .book-details h1 {
+      font-size: 48px;
+      color: #293d5d;
+    }
+
+    .book-details h3 {
+      font-size: 24px;
+      color: #293d5d;
+    }
+
+    .genre {
+      font-size: 16px;
+      color: #81a6e6;
+    }
+
+    .description {
+      margin-top: 20px;
+      line-height: 1.6;
+      font-size: 18px;
+      color: #16345a;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #1d3f72;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #16345a;
+    }
+
+    .recommended-books {
+      padding: 20px;
+    }
+
+    .recommended-books h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .book-carousel {
+      display: flex;
+      gap: 10px;
+    }
+
+    .book-carousel img {
+      width: 120px;
+      height: auto;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+   <!-- Cabeçalho-->
+   <header>
+    <!--Logo-->
+    <a href="index.html"><img src="img/logo-lerevia.jpeg" alt="Logo Lerivia" class="logo"></a>
+
+    <!-- Navegação-->
+    <nav>
+        <ul>
+            <li><a href="técnicas.html">Técnicas de Estudo</a></li>
+            <li><a href="livros.html">Livros</a></li>
+            <li><a href="Estante.html">Sua Estante</a></li>
+            <li><a href="login inter/login.html.html">Perfil</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <main>
+    <section class="book-display">
+      <div class="book-cover">
+        <img src="capas/arquiteturalimpa.jpeg" alt=" ">
+        <div class="bookmark"></div>
+      </div>
+      <div class="book-details">
+        <h1>Big Data</h1>
+        <h3>Rosângela Marquesone</h3>
+        <p class="genre">Back-End</p>
+        <p class="description">
+            Neste livro, Rosangela Marquesone apresenta as tecnologias e soluções de Big Data,
+             em uma abordagem conceitual que detalha as características e capacidades de cada uma delas. 
+             Você verá as principais fases de um projeto de Big Data, desde a captura, o armazenamento, 
+             o processamento, análise, até a visualização de dados.
+        </p>
+        <button>Adicionar à estante</button>
+      </div>
+    </section>
+
+    <section class="recommended-books">
+      <h2>Recomendados</h2>
+      <div class="book-carousel">
+        <img src="img/Algoritmos.jpg" alt="Livro recomendado 1">
+        <img src="img/Código Limpo.webp" alt="Livro recomendado 2">
+        <img src="img/Introdução a programação com Python.jpg" alt="A Metamorfose - Franz Kafka">
+        <img src="img/Introdução ao Desenvolvimento Moderno.jpg" alt="Livro recomendado 3">
+        <img src="img/PHP e MySQL.jpg" alt="Livro recomendado 4">
+      </div>
+    </section>
+  </main>
+</body>
+</html>

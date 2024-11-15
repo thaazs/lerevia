@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LerVia - Perfil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #F4F2ED;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #FFFFFF;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 30px;
+            letter-spacing: 5px;
+        }
+
+        /* Logo */
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            font-size: 16px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #293d5d
+;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #0056b3;
+        }
+
+        #profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 40px;
+            background-color: #F4F2ED;
+        }
+
+        #profile-picture {
+            position: relative;
+        }
+
+        #profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        #profile-picture button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+        }
+
+        #profile-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        #profile-form label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        #profile-form input {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #DDD;
+            border-radius: 25px;
+            background-color: #FFFFFF;
+        }
+
+        #profile-form .password-requirements {
+            font-size: 12px;
+            color: #555;
+            margin-top: -15px;
+        }
+
+        #profile-form button {
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background-color: #00376B;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            width: 150px;
+        }
+
+        #form-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #form-buttons button.cancel {
+            background-color: #D4D4D4;
+        }
+
+         /* Rodapé */
+         .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            color: #888;
+        }
+        /* Estilo do fundo de ondas */
+        #background-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background: url('wave_background.png') no-repeat center;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+     <!-- Cabeçalho-->
+     <header>
+        <!--Logo-->
+        <img src="img/logo-lerevia.jpeg" alt="Logo Lerivia" class="logo">
+
+        <!-- Navegação-->
+        <nav>
+            <ul>
+                <li><a href="técnicas.html">Técnicas de Estudo</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="Estante.html">Sua Estante</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Onda de fundo (pode ajustar o estilo conforme necessário) -->
+    <div id="background-wave"></div>
+
+    <section id="profile-container">
+        <div id="profile-picture">
+            <img src="img/usuário ícone.png" alt="Foto de perfil">
+            <button id="edit-photo"><img src="edit_icon.png" alt="Alterar foto" width="30"></button>
+        </div>
+        <form id="profile-form">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Nome do Usuário">
+
+            <label for="Usuário">Usuário</label>
+            <input type="text" id="Usuário" placeholder="Usuário">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="email@exemplo.com">
+
+            <label for="senha">Alterar senha</label>
+            <input type="password" id="senha" placeholder="Nova senha">
+            <p class="password-requirements">
+                A nova senha deve ter: <br>
+                • Pelo menos uma letra maiúscula <br>
+                • Pelo menos uma letra minúscula <br>
+                • Pelo menos um algarismo <br>
+                • Mais do que 7 caracteres
+            </p>
+
+            <div id="form-buttons">
+                <button type="submit">Salvar alterações</button>
+                <button type="button" class="cancel">Cancelar</button>
+            </div>
+        </form>
+    </section>
+
+    
+    <!-- Rodapé -->
+    <div class="footer">
+        <p>&copy; 2024 Lerivia. Todos os direitos reservados.</p>
+    </div>
+
+</body>
+</html>
