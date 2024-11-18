@@ -33,52 +33,84 @@
             align-items: center;
             padding: 20px;
             background-color: ##f1ede7;
-            border-bottom: 1px solid #ccc;
+
         }
 
          /* Logo */
         .logo {
-            width: 50px;
+            width: 150px;
             height: auto; 
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 10px 0;
-            background-color: #f8f8f8;
-        }
+        .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
 
-        nav ul li {
-            font-size: 16px;
-        }
+.menu > li {
+    position: relative;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #293d5d
-;
-            font-weight: bold;
-        }
+.menu > li > a {
+    text-decoration: none;
+    color: #293d5d;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+}
 
-        nav ul li a:hover {
-            color: #0056b3;
-        }
+/* Submenu */
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f1ede7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    display: none; /* Esconde o submenu por padrão */
+    z-index: 10;
+}
+
+.submenu li {
+    padding: 5px 20px;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #293d5d;
+    display: block;
+    font-size: 14px;
+}
+
+.submenu li a:hover {
+    color: #0056b3;
+}
+
+/* Exibe o submenu ao passar o mouse */
+.menu > li:hover > .submenu {
+    display: block;
+}
 
         .hero {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: center;
             align-items: center;
-            padding: 40px 0;
-            background-color: #e0e8f5;
-            text-align: center;
+            background-color: #f1ede7;
+            text-align: left;
+            height: 80vh;
+        }
+        .hero div {
+            margin-left: 10em;
+            width: 40%;
         }
 
         .hero img {
-            width: 300px;
+            width: 500px;
             height: auto;
-            border-radius: 50%;
         }
 
         .hero h2 {
@@ -93,7 +125,8 @@
 
 
         .content-section {
-            background-color: #e0e8f5;
+            background-color: #1b3869;
+            color: #f1ede7;
             padding: 60px 20px;
             text-align: center;
         }
@@ -110,9 +143,11 @@
         }
 
         .card {
-            background-color: #fff;
+            background-color: #f1ede7;
+            color: #1b3869;
             padding: 20px;
             margin: 10px;
+            border-radius: 5px;
             width: 22%;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -126,6 +161,9 @@
 
         .card p {
             font-size: 1em;
+        }
+        .card h4{
+            font-size: 1.5em;
         }
 
         .tips-section {
@@ -165,16 +203,79 @@
             font-size: 1.1em;
             line-height: 1.8;
         }
+        .methods-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .method-card {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.1);
+        }
+
+        .method-description {
+            text-align: left;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background-color: #5f4676;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .method-card:hover .method-description {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .method-name {
+            font-size: 20px;
+            margin-bottom: 0.5rem;
+        }
+
+
 
         .methods-section {
-            background-color: #e0e8f5;
+            background-color: #f1ede7;
             padding: 40px 20px;
             text-align: center;
         }
 
         .methods-section h3 {
-            font-size: 2.5em;
+            font-size: 2em;
             margin-bottom: 30px;
+            line-height: 1.5em;
+            text-align: left;
+            width: 30%;
         }
 
         .methods {
@@ -220,10 +321,26 @@
         <img src="img/logo-lerevia.jpeg" alt="Logo Lerivia" class="logo">
 
         <!-- Navegação-->
-        <nav>
-            <ul>
-                <li><a href="técnicas.html">Técnicas de Estudo</a></li>
-                <li><a href="livros.html">Livros</a></li>
+        <nav></nav>
+            <ul class="menu">
+                <li>
+                    <a href="técnicas.html">Técnicas de Estudo ﹀</a>
+                    <ul class="submenu">
+                        <li><a href="#">Dicas Gerais</a></li>
+                        <li><a href="#">Técnica 1</a></li>
+                        <li><a href="#">Técnica 2</a></li>
+                        <li><a href="#">Técnica 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="livros.html">Livros ﹀</a>
+                    <ul class="submenu">
+                        <li><a href="#">Backend</a></li>
+                        <li><a href="#">Frontend</a></li>
+                        <li><a href="#">Design Básico</a></li>
+                        <li><a href="#">Design Avançado</a></li>
+                    </ul>
+                </li>
                 <li><a href="Estante.html">Sua Estante</a></li>
                 <li><a href="login inter/login.html.html">Perfil</a></li>
             </ul>
@@ -232,34 +349,41 @@
 
     <section class="hero">
         <img src="img/Pessoa estudando.webp" alt="Imagem destaque">
+        <div>
         <h2>Dicas Gerais</h2>
-        <p>Transforme seu potencial em sucesso com estratégias de estudo eficientes</p>
+        <p>Transforme seu potencial em sucesso com estratégias de estudo eficientes</p> </div>
     </section>
 
     <section class="content-section">
         <h3>Ambiente de estudo</h3>
         <div class="card-container">
             <div class="card">
+                <h4>Lorem Ipsum</h4>
                 <img src="img/livros empilhados.png" alt="Ícone">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="card">
+                <h4>Lorem Ipsum</h4>
                 <img src="img/livros empilhados.png" alt="Ícone">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="card">
+                <h4>Lorem Ipsum</h4>
                 <img src="img/livros empilhados.png" alt="Ícone">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="card">
+                <h4>Lorem Ipsum</h4>
                 <img src="img/livros empilhados.png" alt="Ícone">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
+            
+            
         </div>
     </section>
 
     <section class="tips-section">
-        <div class="tips-item">
+        <div class="tips-item"> 
             <div class="text-content">
                 <h3>Estabeleça uma rotina</h3>
                 <p>
@@ -285,28 +409,48 @@
         </div>
     </section>
 
-    <section class="methods-section">
-        <h3>Adapte o método de estudo ao seu estilo de aprendizagem</h3>
-        <div class="methods">
-            <div class="method">
-                <img src="img/olho.webp" alt="Visual">
-                <p>Visual</p>
+    <section class="methods-section"> <br><br>
+        <h3>Adapte o método de estudo ao seu estilo de aprendizagem!</h3>
+        <div class="methods-grid">
+            <div class="method-card">
+                <div class="image-container">
+                    <img src="img/olho.webp" alt="Visual">
+                    <div class="method-description">
+                        <h2 class="method-name">Visual</h2>
+                        <p>Apreende informações por meio de imagens, gráficos e mapas.</p>
+                    </div>
+                </div>
             </div>
-            <div class="method">
-                <img src="img/pessoa com fone.jpg" alt="Auditivo">
-                <p>Auditivo</p>
+            <div class="method-card">
+                <div class="image-container">
+                    <img src="img/pessoa com fone.jpg" alt="Auditivo">
+                    <div class="method-description">
+                        <h2 class="method-name">Auditivo</h2>
+                        <p>Prefere aprender ouvindo, com explicações e debates.</p>
+                    </div>
+                </div>
             </div>
-            <div class="method">
-                <img src="img/toque.jpg" alt="Cinestésico">
-                <p>Cinestésico</p>
+            <div class="method-card">
+                <div class="image-container">
+                    <img src="img/toque.jpg" alt="Cinestésico">
+                    <div class="method-description">
+                        <h2 class="method-name">Cinestésico</h2>
+                        <p>Aprende melhor praticando e se movimentando.</p>
+                    </div>
+                </div>
             </div>
-            <div class="method">
-                <img src="img/maquina de escrever.jpg" alt="Leitura e Escrita">
-                <p>Leitura e Escrita</p>
+            <div class="method-card">
+                <div class="image-container">
+                    <img src="img/maquina de escrever.jpg" alt="Leitura e Escrita">
+                    <div class="method-description">
+                        <h2 class="method-name">Leitura e Escrita</h2>
+                        <p>Foca em textos escritos e materiais de leitura.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
+    
     <footer>
         <p>&copy; 2024 Lervia. Todos os direitos reservados.</p>
     </footer>

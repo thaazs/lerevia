@@ -36,42 +36,88 @@
             height: auto;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
+        
+        .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
 
-        nav ul li {
-            font-size: 16px;
-        }
+.menu > li {
+    position: relative;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #293d5d
-;
-            font-weight: bold;
-        }
+.menu > li > a {
+    text-decoration: none;
+    color: #293d5d;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+}
 
-        nav ul li a:hover {
-            color: #0056b3;
-        }
+/* Submenu */
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f1ede7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    display: none; /* Esconde o submenu por padrão */
+    z-index: 10;
+}
 
+.submenu li {
+    padding: 5px 20px;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #293d5d;
+    display: block;
+    font-size: 14px;
+}
+
+.submenu li a:hover {
+    color: #0056b3;
+}
+
+/* Exibe o submenu ao passar o mouse */
+.menu > li:hover > .submenu {
+    display: block;
+}
         /* Seção Principal */
         .main-section {
-            text-align: center;
-            padding: 50px 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            justify-content: center;
+            gap: 1em; /* Espaçamento entre texto e imagem */
+        }
+        
+        .textos-inicio {
+       width: 35%; /* Garante que o texto ocupe 50% da largura */
+       text-align: left;
         }
 
+
+    .img-inicio-tec img {
+        width: 800px; /* Ajusta a largura da imagem sem ultrapassar os limites */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
         .main-section h2 {
-            font-size: 28px;
-            color: #293d5d
+            font-size: 40px;
+            color: #002855
 ;
         }
 
         .main-section p {
-            font-size: 18px;
-            color: #4a4a4a;
+            font-size: 35px;
+            color: #002855;
             margin: 20px 0;
         }
 
@@ -95,8 +141,7 @@
 
         .study-carousel {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            justify-content: space-evenly;
         }
 
         .study-carousel img {
@@ -104,6 +149,66 @@
             height: auto;
             border-radius: 5px;
         }
+
+        .study-carousel a {
+
+            background-color: #f1ede7;
+            color: #76458b;
+            padding: .5em;
+            text-decoration: none;
+            border-radius: 50px;
+        }
+        .study-carousel a:hover {
+            background-color: #917894;
+            text-decoration: none;
+        }
+        .card{
+            width: 20%;
+            background-color: #76458b;
+            height: 400px;
+        
+
+        }
+        .card img {
+            width: 100%;
+            border-radius: 0px;
+            
+        }
+        .text-button{
+            background-color: #76458b;
+            color:#f1ede7 ;
+        }
+        .dicas {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 6em;
+            
+        }
+        .dicas h2 {
+            font-size: 30px;
+        
+        }
+        .dicas p {
+            font-size: 20px;
+            text-align: justify;
+        }
+        .dicas a {
+            color: #f1ede7;
+            background-color: #76458b;
+            padding: .5em;
+            text-decoration: none;
+            border-radius: 50px;
+        }
+        .textos-dica{
+            margin-right: 250px;
+        }
+        .img-dicas img {
+
+            width: 50%;
+            margin-left: 250px;
+
 
         .tags-section {
             padding: 50px 20px;
@@ -219,9 +324,25 @@
 
         <!-- Navegação-->
         <nav>
-            <ul>
-                <li><a href="técnicas.html">Técnicas de Estudo</a></li>
-                <li><a href="livros.html">Livros</a></li>
+            <ul class="menu">
+                <li>
+                    <a href="técnicas.html">Técnicas de Estudo ﹀</a>
+                    <ul class="submenu">
+                        <li><a href="#">Dicas Gerais</a></li>
+                        <li><a href="#">Técnica 1</a></li>
+                        <li><a href="#">Técnica 2</a></li>
+                        <li><a href="#">Técnica 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="livros.html">Livros ﹀</a>
+                    <ul class="submenu">
+                        <li><a href="#">Backend</a></li>
+                        <li><a href="#">Frontend</a></li>
+                        <li><a href="#">Design Básico</a></li>
+                        <li><a href="#">Design Avançado</a></li>
+                    </ul>
+                </li>
                 <li><a href="Estante.html">Sua Estante</a></li>
                 <li><a href="login inter/login.html.html">Perfil</a></li>
             </ul>
@@ -230,12 +351,13 @@
 
     <!-- Seção Principal -->
     <section class="main-section">
-        <h2>
-            Desenvolva sua leitura e melhore suas técnicas de estudo
+        <div class="textos-inicio">
+        <h2>Desenvolva sua leitura e melhore suas técnicas de estudo
         </h2>
-        <p>
-            Temos tudo para inspirar e guiar seu aprendizado na área de TI ou Design.
-        </p>
+        <p>Temos tudo para inspirar e guiar seu aprendizado na área de TI ou Design.
+        </p></div>
+        <div class="img-inicio-tec">
+            <img src="img/tecnicas-estudo.png" </div>
     </section>
 
     <!-- Seção Técnicas de estudo-->
@@ -246,33 +368,41 @@
         <div class="study-carousel">
 
           <div class="card">
-            <img src="img/pomodoro.jpg" alt="pomodoro" width="150px">  
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas porta nibh.</p>
-            <a href="pomodoro.html">Acessar</a>
+            <img src="img/pomodoro.jpg" alt="pomodoro">
+            <div class="text-button">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas porta nibh.</p>
+                <a href="pomodoro.html">Acessar</a></div>
           </div>
 
           <div class="card">
-            <img src="img/pomodoro.jpg" alt="pomodoro" width="150px">
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas porta nibh.</p>
-            <a href="pomodoro.html">Acessar</a>
+            <img src="img/pomodoro.jpg" alt="pomodoro">
+            <div class="text-button">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas porta nibh.</p>
+                <a href="pomodoro.html">Acessar</a></div>
           </div>
 
           <div class="card">
-            <img src="img/pomodoro.jpg" alt="pomodoro" width="150px">
+            <img src="img/pomodoro.jpg" alt="pomodoro">
+            <div class="text-button">
             <h3>Lorem Ipsum</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas porta nibh.</p>
-            <a href="pomodoro.html">Acessar</a>
+            <a href="pomodoro.html">Acessar</a></div>
         </div>
           
     </section>
 
     <!-- Seção da Estante -->
-    <section id="Dicas" class="main-section">
+    <section class="dicas" >
+        <div class="img-dicas">
+            <img src="img/dicas.png" alt="">
+        </div>
+        <div class="textos-dica">
         <h2>Dicas Gerais</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas porta nibh. Cras vitae orci finibus, lobortis orci nec, sodales est. Aliquam dictum tempus leo et sodales. Pellentesque efficitur felis dui, nec lacinia felis maximus non. Etiam pulvinar scelerisque quam eu euismod. </p>
-        <a href="dicas.html">Ver Dicas</a>
+        <br><a href="dicas.html">Ver Dicas</a>
+    </div>
     </section>
 
      <!-- Rodapé -->

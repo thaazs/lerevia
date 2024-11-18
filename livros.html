@@ -46,28 +46,58 @@
             height: auto;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
         
-        nav ul li {
-            font-size: 16px;
-        }
+        .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
 
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #293d5d
-;
-            font-weight: bold;
-        }
+.menu > li {
+    position: relative;
+}
 
-        nav ul li a:hover {
-            color: #0056b3;
-        }
+.menu > li > a {
+    text-decoration: none;
+    color: #293d5d;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Submenu */
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f1ede7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    display: none; /* Esconde o submenu por padrão */
+    z-index: 10;
+}
+
+.submenu li {
+    padding: 5px 20px;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #293d5d;
+    display: block;
+    font-size: 14px;
+}
+
+.submenu li a:hover {
+    color: #0056b3;
+}
+
+/* Exibe o submenu ao passar o mouse */
+.menu > li:hover > .submenu {
+    display: block;
+}
 
         /* Banner */
         .banner {
@@ -209,9 +239,25 @@
 
         <!-- Navegação-->
         <nav>
-            <ul>
-                <li><a href="técnicas.html">Técnicas de Estudo</a></li>
-                <li><a href="livros.html">Livros</a></li>
+            <ul class="menu">
+                <li>
+                    <a href="técnicas.html">Técnicas de Estudo ﹀</a>
+                    <ul class="submenu">
+                        <li><a href="#">Dicas Gerais</a></li>
+                        <li><a href="#">Técnica 1</a></li>
+                        <li><a href="#">Técnica 2</a></li>
+                        <li><a href="#">Técnica 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="livros.html">Livros ﹀</a>
+                    <ul class="submenu">
+                        <li><a href="#">Backend</a></li>
+                        <li><a href="#">Frontend</a></li>
+                        <li><a href="#">Design Básico</a></li>
+                        <li><a href="#">Design Avançado</a></li>
+                    </ul>
+                </li>
                 <li><a href="Estante.html">Sua Estante</a></li>
                 <li><a href="login inter/login.html.html">Perfil</a></li>
             </ul>

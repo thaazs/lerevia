@@ -33,22 +33,58 @@
             height: auto;
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
+        
+        .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #293d5d
-;
-            font-weight: bold;
-        }
+.menu > li {
+    position: relative;
+}
 
-        nav ul li a:hover {
-            color: #0056b3;
-        }
+.menu > li > a {
+    text-decoration: none;
+    color: #293d5d;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Submenu */
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f1ede7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    display: none; /* Esconde o submenu por padrão */
+    z-index: 10;
+}
+
+.submenu li {
+    padding: 5px 20px;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #293d5d;
+    display: block;
+    font-size: 14px;
+}
+
+.submenu li a:hover {
+    color: #0056b3;
+}
+
+/* Exibe o submenu ao passar o mouse */
+.menu > li:hover > .submenu {
+    display: block;
+}
 
         /* Hero section */
         .hero {
@@ -76,8 +112,9 @@
          .banner {
             position: relative;
             width: 100%;
-            height: 400px;
+            height: 75vh;
             background-image: url("img/tecnica\ pomodoro.jpg");
+
             background-size: cover;
             background-position: center;
             display: flex;
@@ -86,6 +123,7 @@
             color: white;
             text-align: right;
         }
+        
 
         .banner h1 {
             font-size: 48px;
@@ -96,20 +134,38 @@
             font-size: 18px;
             margin-top: 10px;
         }
+        .enfeite {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-image: url("img/enfeite.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: right;
+        }
 
         /* Features section */
         .features {
+            
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             gap: 20px;
-            background-color: #1a335b;
+            background-color: #f1ede7;
             color: #fff;
             padding: 40px 20px;
         }
 
         .feature-box {
+            position: relative;
+            margin-top: -100px;
+            padding: 2em;
             text-align: center;
-            width: 30%;
+            background-color: #1a335b;
+            width: 25%;
         }
 
         .feature-box img {
@@ -130,24 +186,28 @@
         .content-section {
             padding: 40px 20px;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            text-align: center;
-            background-color: #fff;
+            text-align: justify;
+            background-color: #f1ede7;
         }
 
         .content-section h2 {
+            margin-left: 200px;
             font-size: 2.5em;
             margin-bottom: 20px;
         }
 
         .content-section p {
+            margin-left: 200px;
             font-size: 1.2em;
             max-width: 800px;
+            width: 70%;
         }
 
         .content-section img {
-            width: 200px;
+            margin-right: 10em;
+            width: 500px;
             margin-top: 20px;
             border-radius: 8px;
         }
@@ -164,12 +224,11 @@
         .motivation-box {
             width: 45%;
             background-color: #fff;
-            color: #293d5d
-;
+            color: #293d5d;
             padding: 20px;
             border-radius: 8px;
         }
-
+        
         .motivation-box h3 {
             font-size: 1.8em;
             margin-bottom: 10px;
@@ -199,9 +258,25 @@
 
         <!-- Navegação-->
         <nav>
-            <ul>
-                <li><a href="técnicas.html">Técnicas de Estudo</a></li>
-                <li><a href="livros.html">Livros</a></li>
+            <ul class="menu">
+                <li>
+                    <a href="técnicas.html">Técnicas de Estudo ﹀</a>
+                    <ul class="submenu">
+                        <li><a href="#">Dicas Gerais</a></li>
+                        <li><a href="#">Técnica 1</a></li>
+                        <li><a href="#">Técnica 2</a></li>
+                        <li><a href="#">Técnica 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="livros.html">Livros ﹀</a>
+                    <ul class="submenu">
+                        <li><a href="#">Backend</a></li>
+                        <li><a href="#">Frontend</a></li>
+                        <li><a href="#">Design Básico</a></li>
+                        <li><a href="#">Design Avançado</a></li>
+                    </ul>
+                </li>
                 <li><a href="Estante.html">Sua Estante</a></li>
                 <li><a href="login inter/login.html.html">Perfil</a></li>
             </ul>
@@ -236,12 +311,18 @@
         </div>
     </section>
 
+    <div class="enfeite">
+
+    </div>
+
     <!-- Ciclos e Descanso -->
     <section class="content-section">
+        <div>
         <h2>Ciclos e Descanso</h2>
         <p>
             O ciclo de Pomodoros pode ser repetido várias vezes ao longo do dia, intercalando períodos de trabalho intenso com pausas. Após quatro pomodoros, é recomendada uma pausa mais longa de 15 a 30 minutos. Esse tempo extra pode ser utilizado para atividades relaxantes, como ler um livro ou dar uma caminhada.
         </p>
+    </div>
         <img src="img/dormindo.avif" alt="Relógio">
     </section>
 
