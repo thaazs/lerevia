@@ -33,7 +33,6 @@
             align-items: center;
             padding: 20px;
             background-color: ##f1ede7;
-            border-bottom: 1px solid #ccc;
         }
 
         header img {
@@ -98,172 +97,43 @@
 .menu > li:hover > .submenu {
     display: block;
 }
-
-        /* Banner */
-        .banner {
-            position: relative;
-            width: 100%;
-            height: 80vh;
-            background-image: url("img/Codigos.png");
-            background-size: cover;
-            background-position: center;
+         
+        .banner-estante {
             display: flex;
+            margin: 5em;
             align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: right;
-        }
-
-        .banner h1 {
-            font-size: 48px;
-            font-weight: bold;
-            text-align: right;
-            margin-right: 2em;
-        }
-
-        .banner p {
-            font-size: 25px;
-            margin-left: 700px;
-            margin-top: 10px;
-            width: 50%;
-            text-align: right;
-        }
-
-        /* Seção de Destaques */
-        .section-destaque {
-            background-color: #083c5a;
-            height: 50vh;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            gap:50px;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .section-destaque h2 {
-            font-size: 38px;
-            margin-bottom: 20px;
-        }
-
-        .section-destaque img {
-            width: 200px;
-            margin: 0 auto;
-            display: block;
+            justify-content: space-between;
+            padding: 20px;
+            border: 1px solid #ccc;
             border-radius: 10px;
+                } 
+
+        .banner-estante img {
+            border-radius: 5px;
         }
 
-        .section-destaque p {
-            margin-top: 10px;
-            font-size: 16px;
-        }
-
-        .section-text {
-            text-align: justify;
-        }
-        .section-text h3 {
-            width: 70%;
-        }
-        .description-destaque {
-            text-align: justify;
-            width: 40%;
-        }
-
-        .search-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #00528d;
-        border-radius: 50px;
-        width: 30%;
-        margin-left: 2em;
-        margin-top: 1em;
-        padding: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .search-bar {
-        flex: 1;
-        border: none;
-        background-color: #00528d;
-        border-radius: 50px;
-        font-size: 16px;
-        outline: none;
-        text-align: center;
-        }
-
-        .search-bar::placeholder {
-        color: #ffffff;
-        }
-
-        .search-button {
-        border: none;
-        background: none;
-        color: #ffffff;
-        font-size: 20px;
-        cursor: pointer;
-        padding: 0 15px;
-        outline: none;
-        }
-
-        .acessar-livro {
-            background-color: #083c5a;
-            border-radius: 50px;
-            color:#f1ede7;
-            text-decoration: none;
-            padding: 5px;
-            margin-top: 1em;
-            font-size: 14px;
-        }
-
-        .acessar-livro :hover {
-            background-color: #06273a;
-        }
-
-        .titulo-pagina {
-            margin-top: 2em;
-            margin-left: 2em;
+        .info-estantes {
+            width: 50%;
         }
         
 
-        /* Estante de Livros */
-        .estante {
-            padding: 40px;
-            background-color: #f1ede7;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
 
-        .book-card {
-            background-color: #f1ede7;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
+        .info-estantes a {
+            display: inline-block;
+            text-decoration: none; /* Remove as decorações */
+            background-color: #00528d;
+            color: #ffffff; /* Texto branco */
+            padding: 10px 15px;
+            border-radius: 50px; /* Cantos arredondados */
+            margin-top: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            }
 
-        .book-card img {
-            width: 150px;
-            border-radius: 8px;
-        }
-
-        .book-card h3 {
-            margin: 15px 0 10px;
-            font-size: 18px;
-        }
-
-        .book-card p {
-            font-size: 14px;
-            color: #666;
-            text-align: center;
-        }
-
+                .info-estantes a:hover {
+                    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+                }
+        
         
 
         /* Responsividade */
@@ -325,71 +195,39 @@
         </nav>
     </header>
 
-    <!-- Banner Principal -->
-    <div class="banner">
-        <div>
-            <h1>Back-End</h1>
-            <p>Descubra o back-end: a estrutura central que processa dados no servidor. 
-            Inclue linguagens como Java, Ruby, C++ e Python, e bancos de dados como o MySQL.</p>
+   <main>
+
+    <div class="banner-estante">
+        
+            <img class="img-dev" src="https://img.freepik.com/vetores-gratis/laptop-com-icone-de-codigo-isometrico-de-programa-desenvolvimento-de-software-e-aplicacoes-de-programacao-neon-escuro_39422-971.jpg?semt=ais_hybrid">
+        
+
+        <div class="info-estantes">
+            <h1>Estante DEV</h1>
+            <p>Descubra o desenvolvimento: a construção e estruturação de sistemas e aplicações 
+                através de linguagens como JavaScript, Python, Ruby e frameworks como React e Django. 
+                Inclui a criação de back-end, integração de banco de dados, e otimização de performance 
+                para entregar soluções ágeis e escaláveis.</p>
+            <a href="livros/dev/estanteDev.html">Acessar</a>
         </div>
+
     </div>
 
-    <!-- Seção de Destaques -->
-    <section class="section-destaque">
-        <div class="section-text">
-           <h2>Leitura em destaque</h2>
-           <h3>Uma leitura que vai enriquecer seu conhecimento e inspirar novas ideias.</h3>
+    
+    <div class="banner-estante">
+        <div class="info-estantes">
+            <h1>Estante Design</h1>
+            <p>Explore o design : combinações criativas de estética e funcionalidade, 
+                abordagens inovadoras de design gráfico, tipografia e cores para criar 
+                experiências visuais impactantes e intuitivas.</p>
+                <a href="livros/design/estanteDesign.html">Acessar</a>
         </div>
-        <div class="book-destaque">
-           <img src="img/Arquitetura Limpa.jpg" alt="Arquitetura Limpa">
-        </div>
-        <div class="description-destaque">
-            <h1>Big Data</h1>
-        <h3>Rosângela Marquesone</h3>
-        <br><br>
-        <p class="description">
-            Neste livro, Rosangela Marquesone apresenta as tecnologias e soluções de Big Data,
-             em uma abordagem conceitual que detalha as características e capacidades de cada uma delas. 
-             Você verá as principais fases de um projeto de Big Data, desde a captura, o armazenamento, 
-             o processamento, análise, até a visualização de dados.</p>
+        
+            <img src="https://img.freepik.com/fotos-gratis/grupo-de-diversos-designers-tendo-uma-discussao_53876-14556.jpg">
+        
+    </div>
 
-        </div>
-    </section>
-
-    <!-- Barra de Pesquisa -->
-     <h2 class="titulo-pagina"> Estante Back-End</h2>
-     <div class="search-container">
-        <input type="text" class="search-bar" placeholder="Qual será seu próximo estudo?">
-        <button class="search-button">
-          🔍
-        </button>
-      </div>
-
-    <!-- Estante de Livros -->
-    <section class="estante">
-        <div class="book-card">
-            <img src="img/Algoritmos.jpg" alt="Algoritmos">
-            <h3>Algoritmos</h3>
-            <p>Por Thomas H. Cormen</p>
-            <a class="acessar-livro" href="info.html">Ver mais</a>
-        </div>
-
-        <div class="book-card">
-            <img src="img/Big Data.jpg" alt="Big Data">
-            <h3>Big Data</h3>
-            <p>Por Rosângela Marquesone</p>
-            <a class="acessar-livro" href="info.html">Ver mais</a>
-            
-        </div>
-
-        <div class="book-card">
-            <img src="img/Introdução a programação com Python.jpg" alt="Programação Com Python">
-            <h3>Introdução a Programação com Python</h3>
-            <p>Por Nilo Ney Coutinho Menezes</p>
-            <a class="acessar-livro" href="info.html">Ver mais</a>
-
-        </div>
-    </section>
+   </main>
 
     <footer>
         <p>&copy; 2024 Lervia. Todos os direitos reservados.</p>
