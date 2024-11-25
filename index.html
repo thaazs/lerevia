@@ -280,34 +280,31 @@
         .tag-cloud span.purple {
             background-color: #673ab7;
         }
-        footer {
-    background-color: var(--preto);
-    text-align: center;
-    margin-top: 10px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.social-rodape {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-}
-.redes {
-    color: var(--branco);
-    text-decoration: none;
-    font-family: var(--corpo-titulo);
-    display: flex;
-    align-items: center;
-}
-.social-rodape img {
-    width: 45px;
-    margin-right: 5px; /* Ajuste este valor conforme necessário */
-}
+       
 .logo img {
     width: 150px; /* Ajuste este valor conforme necessário */
+}
+.links-rodape {
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: 10em;
+}
+.links-rodape a {
+    text-decoration: none;
+    color: #00528d;
+padding: 0.5em;
+}
+.rodape {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2em;
+}
+.copy {
+    text-align: center;
+    margin-top: 3em;
 }
 
         /* Responsividade */
@@ -416,14 +413,25 @@
     </section>
 
     <footer>
-        <div class="social-rodape">
-            <a class="redes" href="https://www.instagram.com/vozes.resistencia/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><img src="img/instapng.png" alt="Icone Instagram"> @lerevia</a>
-            <a class="redes" href="https://x.com/vozesresistem?s=20" target="_blank"><img src="img/icone twitter.avif" alt="Icone Twitter"> @lerevia</a>
+        <div class="rodape"> 
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-lerevia.jpeg" alt="Logo do Projeto"></a>
         </div>
-        <div class="logo">
-            <a href="index.html"><img src="img/logo-lerevia.jpeg" alt="Logo do Projeto"></a>
+        <div class="links-rodape">
+            <a href="técnicas.html">Técnicas de estudo</a>
+            <a href="dicas.html">Dicas gerais</a>
+            <a href="técnicas de estudo/pomodoro.html">Pomodoro</a>
+        </div>
+        <div class="links-rodape">
+            <a href="livros/design/estanteDesign.html">Estante Design</a>
+            <a href="livros/dev/estanteDev.html">Estante Dev</a>
+        </div>
+        <div class="links-rodape">
+            <a href="Estante.html">Sua estante</a>
+            <a href="perfil.html">Perfil</a>
+        </div>
     </div>
-        </div>
+    
     </footer>
 
 </body>
